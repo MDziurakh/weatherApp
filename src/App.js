@@ -8,8 +8,9 @@ function App() {
     const [celsius, setCelsius] = useState(false)
     const [km, setKm] = useState(false)
     const [location, setLocation] = useState('')
+    const MY_API = process.env.REACT_APP_MY_API;
 
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=9b125a5e8cd395216f34c8ddac0489c4`
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${MY_API}`
 
     const searchLocation = (e) => {
         if (e.key === 'Enter') {
